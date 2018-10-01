@@ -6,8 +6,9 @@ function App(){
     return (
         <div>
             <h1>App Name</h1>
-            <Article article={articles[0]} foo="bar" flag />
+            <Article article={articles[0]} foo="baaaar" flag />
         </div>
+
     )
 }
 

@@ -8,18 +8,28 @@ class Article extends Component {
     render() {
         // console.log('THIS:', this);
         const {article} = this.props;
+        const style = {width: '50%'};
         console.log('----- Article Props', this.props);
-        const body = this.state.isOpen && <section>{article.text}</section>;
+        const body = this.state.isOpen && <section className="card-text">{article.text}</section>;
         return (
-            <div className='hello' style={{color: 'green'}}>
+            <div className="card mx-auto" style = {style}>
+                <div className="card-header">
                 <h2>
                     {article.title}
-                    <button onClick={this.handleClick}>close</button>
+                    <button onClick={this.handleClick} className="btn btn-primary btn-lg float-right">
+                        {this.state.isOpen ? 'close' : 'open'}
+                    </button>
                 </h2>
-                {body}
-                <h3>creation date: {(new Date(article.date)).toDateString()}</h3>
-                    </div>
-                )
+                </div>
+                <div className="card-body">
+                    {body}
+                    <h6 className="text-capitalize text-muted">
+                        creation date: {(new Date(article.date)).toDateString()}
+                    </h6>
+
+                </div>
+            </div>
+            )
         }
 /*
         handleClick = function () {

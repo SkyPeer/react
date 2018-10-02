@@ -9,7 +9,8 @@ class App extends Component {
     };
     render()
     {
-        console.log('-----', '2', this.state);
+        const articlesList = this.state.reverted ? articles.reverse() : articles;
+        console.log('-----', '2', this.state, articles.map(article => article.id));
         return (
             <div className="container">
                 <div className="jumbotron">
@@ -18,7 +19,7 @@ class App extends Component {
                         <button className="btn" onClick = {this.revert}>Revert</button>
                     </h1>
                 </div>
-                <ArticleList articles={this.state.reverted ? articles.reverse() : articles}/>
+                <ArticleList articles={articlesList}/>
             </div>
         )
     }

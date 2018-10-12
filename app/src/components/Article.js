@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 
 class Article extends PureComponent {
     constructor(props){
-    super(props)
+    super(props);
 
         this.state = {
        // isOpen: props.defaultOpen,

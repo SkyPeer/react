@@ -40,6 +40,7 @@ class Article extends PureComponent {
         const style = {width: '50%'};
     //    console.log('----- Article Props', this.props);
         const body = isOpen && <section className="card-text">{article.text}</section>;
+        console.log('isOpen: ',isOpen);
         return (
             <div className="card mx-auto" style = {style}>
                 <div className="card-header">

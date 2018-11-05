@@ -20,6 +20,7 @@ export default class ArticleList extends Component{
          openArticleId: null
     };
     render(){
+        console.log('this.state.openArticleId: ' ,this.state.openArticleId);
         const articleElements = this.props.articles.map((article, index) =>
             <li key = {article.id} className="article-list__li">
                 <Article article = {article}
